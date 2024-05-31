@@ -11,6 +11,10 @@ function theme_perso_assets(){
 
 function theme_perso_supports(){
     add_theme_support('menus');
+    add_theme_support('post-thumbnails',[
+        'post',
+        'creation',
+    ]);
 
     register_nav_menus([
         'main-menu'=> 'Menu principal',
@@ -18,5 +22,67 @@ function theme_perso_supports(){
     ]);
 }
 
+function theme_perso_init(){
+    register_post_type("creation", [
+        "label"=>'Créations',
+        "labels"=>[
+            "name"=>"Créations",
+            "singular_name"=>"Création",
+            "add_new"=>"Ajouter une nouvelle création",
+            "add_new_item"=>"Ajouter une nouvelle création",
+            "edit_item"=>"Modifier la création",
+            "new_item"=>"Nouvelle création",
+            "view_item"=>"Voir la création",
+            "view_items"=>"Visualiser les créations",
+            "search_items"=>"Rechercher des créations",
+            "not_found"=>"Pas de création trouvée",
+            "not_found_in_trash"=>"Pas de création trouvée dans la corbeille",
+            "all_items"=>"Toutes les créations",
+            "archives"=>"Archives des créations",
+            "attributes"=>"Attributs de la création",
+            "insert_into_item"=>"Insérer dans la création",
+            "uploaded_to_this_item"=>"Ajouté à la création",
+        ],
+        "public"=>true,
+        "show_in_rest"=>true,
+        "menu_icon"=>"dashicons-admin-site-alt3",
+        "supports"=>[
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+        ],
+        "has_archive"=>true,
+        "rewrite"=>[
+            "slug"=>"creations",
+            "with_front"=>"false",
+        ]
+    ]);
+}
+
+function theme_perso_creation_slider(){
+    $query = new WP_Query([
+        'post_type' => 'creation',
+        'post_status' => 'publish',
+        'posts_per_page'=>10,
+    ]);
+    ob_start();?>
+    <ul>
+        <?php while($query->have_posts()): $query->the_post(); ?>
+            <li>
+                <?php
+                    the_title();
+                    the_excerpt();
+                    the_post_thumbnail('large');
+                ?>
+            </li>
+        <?php endwhile;wp_reset_postdata(); ?>
+    </ul>
+    <?php $html = ob_get_clean();
+    return $html;
+}
+add_shortcode('creation-slider', 'theme_perso_creation_slider');
+
 add_action('wp_enqueue_scripts', 'theme_perso_assets');
 add_action('after_setup_theme', 'theme_perso_supports');
+add_action('init','theme_perso_init');
