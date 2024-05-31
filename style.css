@@ -1,0 +1,80 @@
+/*
+Theme Name: Theme Perso
+*/
+
+:root{
+    --bleu-clair: #D7F5FB;
+    --bleu-moyen: #357BB1;
+    --page-width: 1100px;
+}
+
+html,body{
+    margin:0px;
+    padding:0px;
+}
+
+*{
+    font-family: 'Roboto';
+}
+
+header a{
+    color:white;
+    text-decoration: none;
+}
+
+header{
+    background-color: var(--bleu-moyen);
+}
+
+div.header-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin:auto;
+    box-sizing: border-box;
+    width:var(--page-width);
+    max-width: 100%;
+}
+
+p.site-title{
+    font-size:25px;
+    font-weight:700;
+}
+
+#main-menu{
+    display:flex;
+    gap:10px;
+    font-weight:500;
+}
+
+#main-menu li{
+    list-style-type: none;
+}
+
+main{
+    box-sizing: border-box;
+    width:var(--page-width);
+    max-width: 100%;
+    margin:auto;
+}
+
+footer{
+    /*background: linear-gradient(white,var(--bleu-clair));*/
+    background-color: var(--bleu-clair);
+}
+
+div.footer-container{
+    box-sizing: border-box;
+    width:var(--page-width);
+    max-width: 100%;
+    margin:auto;
+}
+
+#footer-menu{
+    padding:0px;
+}
+
+#footer-menu li{
+    list-style-type: none;
+}
