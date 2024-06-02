@@ -1,0 +1,14 @@
+{
+  "name": "theme-perso",
+  "version": "1.0.0",
+  "description": "A custom WordPress theme for my website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.6.1"
+  }
+}
