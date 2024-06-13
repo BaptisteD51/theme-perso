@@ -6,6 +6,7 @@ Theme Name: Theme Perso
     --bleu-clair: #D7F5FB;
     --bleu-moyen: #357BB1;
     --page-width: 1100px;
+    --page-padding: 15px;
 }
 
 html,body{
@@ -37,6 +38,7 @@ div.header-container{
     
     margin:auto;
     box-sizing: border-box;
+    padding:0px var(--page-padding);
     width:var(--page-width);
     max-width: 100%;
 }
@@ -61,6 +63,7 @@ main{
     width:var(--page-width);
     max-width: 100%;
     margin:auto;
+    padding:0px var(--page-padding);
 }
 
 footer{
@@ -100,20 +103,17 @@ div.footer-container{
     margin-bottom: 25px;
 }
 
-/* Home page CSS */
+/* Archive des créations */
+.archive-creation-list{
+    padding:0px;
+    margin:0px;
 
-/* div.colonne-photo{
-    width:300px;
-    flex-basis:unset!important;
-    flex-grow:unset!important;
+    display: flex;
+    flex-wrap:wrap;
+    gap:35px;
 }
 
-div.cadre-photo{
-    width:250px;
-    margin:auto;
-    padding:20px;
+.archive-creation-list li{
+    width:333px;
+    list-style-type: none;
 }
-
-div.block-presentation{
-    align-items: center!important;
-} */
