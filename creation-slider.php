@@ -16,7 +16,6 @@
     </div>
     <script>
         $('.slider').slick({
-            dots:true,
             autoplay:true,
         });
     </script>

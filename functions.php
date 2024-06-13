@@ -23,6 +23,7 @@ function theme_perso_supports(){
         'post',
         'creation',
     ]);
+    add_theme_support('align-wide');
 
     register_nav_menus([
         'main-menu'=> 'Menu principal',
