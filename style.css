@@ -13,6 +13,10 @@ html,body{
     padding:0px;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 *{
     font-family: 'Roboto';
 }
@@ -88,5 +92,28 @@ div.footer-container{
 
 .wp-block-cover.alignfull .wp-block-cover__inner-container{
     width:var(--page-width);
+    max-width: 100%;
     margin:auto;
 }
+
+.wp-block-media-text, .wp-block-cover{
+    margin-bottom: 25px;
+}
+
+/* Home page CSS */
+
+/* div.colonne-photo{
+    width:300px;
+    flex-basis:unset!important;
+    flex-grow:unset!important;
+}
+
+div.cadre-photo{
+    width:250px;
+    margin:auto;
+    padding:20px;
+}
+
+div.block-presentation{
+    align-items: center!important;
+} */

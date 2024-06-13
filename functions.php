@@ -7,6 +7,7 @@ function theme_perso_assets(){
     wp_register_style('slick-css', get_template_directory_uri().'/js/slick/slick.css');
     wp_register_style('slick-theme-css', get_template_directory_uri().'/js/slick/slick-theme.css');
     wp_register_script('slick', get_template_directory_uri().'/js/slick/slick.min.js');
+    wp_register_style('slider', get_template_directory_uri().'/css/slider.css');
 
     wp_enqueue_style('theme_perso_style');
     wp_enqueue_script('fontawesome');
@@ -15,6 +16,7 @@ function theme_perso_assets(){
     wp_enqueue_style('slick-css');
     wp_enqueue_script('slick');
     wp_enqueue_style('slick-theme-css');
+    wp_enqueue_style('slider');
 };
 
 function theme_perso_supports(){
@@ -24,12 +26,32 @@ function theme_perso_supports(){
         'creation',
     ]);
     add_theme_support('align-wide');
+    add_theme_support('editor-styles');
+
+    $palette = [
+        [
+            "slug" => "bleu-clair",
+            "color" => "#D7F5FB",
+            "name" => "Bleu Clair"
+        ],[
+            "slug" => "bleu-moyen",
+            "color" => "#357BB1",
+            "name" => "Bleu Moyen"
+        ],
+    ];
+    add_theme_support('editor-color-palette', $palette);
+
+    add_theme_support('appearance-tools');
+    
+    add_theme_support('custom-spacing');
 
     register_nav_menus([
         'main-menu'=> 'Menu principal',
         'footer-menu'=> 'Menu footer',
     ]);
 }
+
+add_editor_style(get_template_directory_uri() . '/css/editor-style.css');
 
 function theme_perso_init(){
     register_post_type("creation", [
