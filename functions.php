@@ -8,6 +8,8 @@ function theme_perso_assets(){
     wp_register_style('slick-theme-css', get_template_directory_uri().'/js/slick/slick-theme.css');
     wp_register_script('slick', get_template_directory_uri().'/js/slick/slick.min.js');
     wp_register_style('slider', get_template_directory_uri().'/css/slider.css');
+    wp_register_script('highlightjs', get_template_directory_uri()."/js/highlightjs/highlight.min.js");
+    wp_register_style('highlightjsCSS', get_template_directory_uri()."/js/highlightjs/styles/atom-one-dark-reasonable.min.css");
 
     wp_enqueue_style('theme_perso_style');
     wp_enqueue_script('fontawesome');
@@ -17,6 +19,8 @@ function theme_perso_assets(){
     wp_enqueue_script('slick');
     wp_enqueue_style('slick-theme-css');
     wp_enqueue_style('slider');
+    wp_enqueue_script('highlightjs');
+    wp_enqueue_style('highlightjsCSS');
 };
 
 function theme_perso_supports(){
@@ -91,8 +95,15 @@ function theme_perso_init(){
     ]);
 }
 
+function theme_perso_wp_footer(){
+    wp_register_script('script', get_template_directory_uri()."/js/script.js");
+
+    wp_enqueue_script("script");
+}
+
 require_once 'creation-slider.php';
 
 add_action('wp_enqueue_scripts', 'theme_perso_assets');
 add_action('after_setup_theme', 'theme_perso_supports');
 add_action('init','theme_perso_init');
+add_action('wp_footer', 'theme_perso_wp_footer');

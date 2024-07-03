@@ -7,6 +7,7 @@ Theme Name: Theme Perso
     --bleu-moyen: #357BB1;
     --page-width: 1100px;
     --page-padding: 15px;
+    --post-width:700px;
 }
 
 html,body{
@@ -117,3 +118,28 @@ div.footer-container{
     width:333px;
     list-style-type: none;
 }
+
+/* Page d'article */
+body.single-post main{
+    width:var(--post-width);
+}
+
+/* Archive du blog */
+main.archive-post{
+    width:var(--page-width);
+}
+
+.archive-post-list{
+    margin:0px;
+    padding:0px;
+}
+
+.archive-post-list li{
+    width:300px;
+    list-style-type: none;
+}
+
+.archive-post-list a{
+    text-decoration: none;
+    color:black;
+} 

@@ -1,0 +1,1 @@
+hljs.highlightAll();console.log(hljs)
