@@ -103,6 +103,8 @@ function theme_perso_wp_footer(){
 
 require_once 'creation-slider.php';
 
+require_once 'functions/summary/theme_perso_summary.inc.php';
+
 add_action('wp_enqueue_scripts', 'theme_perso_assets');
 add_action('after_setup_theme', 'theme_perso_supports');
 add_action('init','theme_perso_init');
