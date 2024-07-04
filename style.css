@@ -142,4 +142,33 @@ main.archive-post{
 .archive-post-list a{
     text-decoration: none;
     color:black;
-} 
+}
+
+/* Css pour le sommaire des articles */
+
+section.summary-wrapper{
+    display:flex;
+    justify-content: center;
+}
+
+ol.summary{
+    background-color: var(--bleu-clair);
+    padding: 40px 30px;
+    list-style-position: inside;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px lightgrey;
+}
+
+ol.summary li a{
+    color:navy;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ol.summary li li a{
+    font-weight:normal;
+}
+
+ol.summary a:hover{
+    text-decoration: underline;
+}

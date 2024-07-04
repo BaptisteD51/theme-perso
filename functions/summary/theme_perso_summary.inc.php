@@ -10,9 +10,9 @@ function theme_perso_summary($content){
     if ( is_singular('post') && in_the_loop() && is_main_query() ) {
         $summary = new Summary;
         $summary->collect_headers($content);
-        var_dump($summary->headers);
 
-        $content = "<h1>Hello World</h1>" . $content;
+        $content = $summary->append_summary($content);
+        $content = $summary->replace_headers($content);
     }
     return $content;
 }
