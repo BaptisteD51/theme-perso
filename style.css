@@ -8,6 +8,7 @@ Theme Name: Theme Perso
     --page-width: 1100px;
     --page-padding: 15px;
     --post-width:700px;
+    --shadow:0px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 html,body{
@@ -51,7 +52,7 @@ p.site-title{
 
 #main-menu{
     display:flex;
-    gap:10px;
+    gap:25px;
     font-weight:500;
 }
 
@@ -171,4 +172,64 @@ ol.summary li li a{
 
 ol.summary a:hover{
     text-decoration: underline;
+}
+
+/* CSS pour les animations sur la page d'accueil */
+
+@keyframes text-slide{
+    from{
+        transform: translateY(100%);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity:1;
+    }
+}
+
+body.home p.site-title, body.home #main-menu-wrapper li{
+    overflow: hidden;
+}
+
+body.home p.site-title a, body.home #main-menu-wrapper a{
+    display:block;
+    animation:text-slide 1.5s;
+}
+
+div.reference-menu{
+    perspective: 1000px;
+}
+
+div.reference-menu>div{
+    transform: rotateX(15deg) rotateY(-25deg);
+    transition: all 0.2s;
+    box-shadow: var(--shadow);
+}
+
+div.reference-menu>div:hover{
+    transform:scale(1.05) rotateX(10deg) rotateY(-20deg);
+    filter:brightness(120%);
+}
+
+div.reference-menu a{
+    min-width:150px;
+}
+
+/* Language switcher */
+
+li.pll-parent-menu-item ul a{
+    animation: none!important;
+}
+
+li.pll-parent-menu-item{
+    position:relative;
+}
+
+li.pll-parent-menu-item ul{
+    position:absolute;
+    width:calc(100% + 10px);
+    transform: translateX(-5px);
+    padding:5px;
+    background-color: navy;
+    box-shadow: var(--shadow);
 }
