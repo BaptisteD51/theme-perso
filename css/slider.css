@@ -2,3 +2,22 @@ img{
     width:100%;
     height: auto;
 }
+
+.slick-arrow{
+    z-index:1;
+    transform: scale(200%);
+}
+
+.slick-next{
+    right:25px;
+}
+
+.slick-prev{
+    left:25px;
+}
+
+@media screen and (max-width:899px){
+    .slick-arrow{
+        display:none;
+    }
+}

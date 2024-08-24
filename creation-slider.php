@@ -9,8 +9,10 @@
         <?php while($query->have_posts()): $query->the_post(); ?>
             <div>
                 <?php the_post_thumbnail('large');?>
-                <h3><?php the_title();?></h3>
-                <p><?php echo get_the_excerpt() . " <a href='".get_the_permalink()."'>Découvrir</a>"; ?></p>
+                <div class="slider-text">
+                    <h3><?php the_title();?></h3>
+                    <p><?php echo get_the_excerpt() . " <a href='".get_the_permalink()."' class='slider-link'>Découvrir</a>"; ?></p>
+                </div>
             </div>
         <?php endwhile;wp_reset_postdata(); ?>
     </div>

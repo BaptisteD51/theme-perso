@@ -9,7 +9,9 @@
             <?php while (have_posts()) : the_post(); ?>
                 <li>
                     <a href="<?php the_permalink() ?>">
-                        <?php the_post_thumbnail(); ?>
+                        <figure>
+                            <?php the_post_thumbnail('thumbnail'); ?>                        
+                        </figure>
                         <h2><?php the_title(); ?></h2>
                     </a>
                 </li>

@@ -10,6 +10,8 @@ function theme_perso_assets(){
     wp_register_style('slider', get_template_directory_uri().'/css/slider.css');
     wp_register_script('highlightjs', get_template_directory_uri()."/js/highlightjs/highlight.min.js");
     wp_register_style('highlightjsCSS', get_template_directory_uri()."/js/highlightjs/styles/atom-one-dark-reasonable.min.css");
+    wp_register_style('burgerCSS', get_template_directory_uri()."/css/burger.css");
+    //wp_register_script('iconify', "https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js");
 
     wp_enqueue_style('theme_perso_style');
     wp_enqueue_script('fontawesome');
@@ -21,6 +23,8 @@ function theme_perso_assets(){
     wp_enqueue_style('slider');
     wp_enqueue_script('highlightjs');
     wp_enqueue_style('highlightjsCSS');
+    wp_enqueue_style('burgerCSS');
+    //wp_enqueue_script('iconify');
 };
 
 function theme_perso_supports(){
@@ -97,15 +101,24 @@ function theme_perso_init(){
 
 function theme_perso_wp_footer(){
     wp_register_script('script', get_template_directory_uri()."/js/script.js");
+    wp_register_script('burger', get_template_directory_uri()."/js/burger.js");
 
     wp_enqueue_script("script");
+    wp_enqueue_script("burger");
+}
+
+function theme_perso_excerpt_length($length){
+    return 20;
 }
 
 require_once 'creation-slider.php';
 
 require_once 'functions/summary/theme_perso_summary.inc.php';
 
+require_once 'functions/theme_perso_get_home_url.inc.php';
+
 add_action('wp_enqueue_scripts', 'theme_perso_assets');
 add_action('after_setup_theme', 'theme_perso_supports');
 add_action('init','theme_perso_init');
 add_action('wp_footer', 'theme_perso_wp_footer');
+add_filter( 'excerpt_length', 'theme_perso_excerpt_length');
