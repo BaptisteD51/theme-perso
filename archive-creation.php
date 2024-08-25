@@ -4,7 +4,7 @@
 ?>
 <main>
     <?php if (have_posts()) : ?>
-        <h1> Mes créations de sites Web </h1>
+        <h1><?php echo __("Mes créations de sites Web", "theme_perso");?></h1>
         <ul class="archive-creation-list">
             <?php while (have_posts()) : the_post(); ?>
                 <li>

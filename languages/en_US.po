@@ -1,0 +1,37 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Theme Perso\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-25 22:40+0000\n"
+"PO-Revision-Date: 2024-08-25 22:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.1\n"
+"X-Domain: theme_perso"
+
+#. Author of the theme
+msgid "Anonyme"
+msgstr "Anonymous"
+
+#: creation-slider.php:14
+msgid "Découvrir"
+msgstr "Discover"
+
+#: archive-creation.php:7
+msgid "Mes créations de sites Web"
+msgstr "My Website Creations"
+
+#. Name of the template
+#: template-no-title.php:2
+msgid "Page sans <h1>"
+msgstr "Template without <h1>"
+
+#. Name of the theme
+msgid "Theme Perso"
+msgstr "Theme Perso"

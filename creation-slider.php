@@ -11,7 +11,7 @@
                 <?php the_post_thumbnail('large');?>
                 <div class="slider-text">
                     <h3><?php the_title();?></h3>
-                    <p><?php echo get_the_excerpt() . " <a href='".get_the_permalink()."' class='slider-link'>Découvrir</a>"; ?></p>
+                    <p><?php echo get_the_excerpt() . " <a href='".get_the_permalink()."' class='slider-link'>".__('Découvrir',"theme_perso")."</a>"; ?></p>
                 </div>
             </div>
         <?php endwhile;wp_reset_postdata(); ?>

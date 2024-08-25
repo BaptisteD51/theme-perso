@@ -57,6 +57,8 @@ function theme_perso_supports(){
         'main-menu'=> 'Menu principal',
         'footer-menu'=> 'Menu footer',
     ]);
+
+    load_theme_textdomain('theme_perso',get_template_directory()."/languages");
 }
 
 add_editor_style(get_template_directory_uri() . '/css/editor-style.css');
