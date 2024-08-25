@@ -26,6 +26,11 @@ figure{
     margin:0px;
 }
 
+figcaption{
+    font-style: italic;
+    text-align: center;
+}
+
 * {
     font-family: 'Roboto';
 }
@@ -396,4 +401,27 @@ div.header-container {
 
 .slider-link:hover{
     transform: scale(103%);
+}
+
+/* Button reusable classes */
+
+.theme-perso-button-bleu-moyen{
+    background-color: var(--bleu-moyen);
+    color:white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border:none;
+    cursor: pointer;
+}
+
+.theme-perso-button-bleu-moyen:hover{
+    transform: scale(103%);
+}
+
+/* Contact page */
+.wpcf7 .theme-perso-button-bleu-moyen{
+    font-size: 15px;
 }
