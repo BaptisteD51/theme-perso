@@ -125,6 +125,10 @@ h3{
     font-size: 25px;
 }
 
+code, code strong{
+    font-family: monospace;
+}
+
 /* Class WP */
 .alignfull {
     margin: 0px calc(50% - 50vw);

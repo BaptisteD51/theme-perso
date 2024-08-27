@@ -18,7 +18,7 @@
             <?php endwhile; ?>
         </ul>
     <?php else : ?>
-        <p>Pas de créations à afficher</p>
+        <p><?php echo __("Pas de créations à afficher", "theme_perso") ?></p>
     <?php endif; ?>
 </main>
 

@@ -53,6 +53,8 @@ function theme_perso_supports(){
     
     add_theme_support('custom-spacing');
 
+    add_theme_support( "title-tag" );
+
     register_nav_menus([
         'main-menu'=> 'Menu principal',
         'footer-menu'=> 'Menu footer',

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Theme Perso\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-25 22:40+0000\n"
-"PO-Revision-Date: 2024-08-25 22:45+0000\n"
+"PO-Revision-Date: 2024-08-26 21:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -23,6 +23,10 @@ msgstr "Anonymous"
 msgid "Découvrir"
 msgstr "Discover"
 
+#: 404.php:3
+msgid "Erreur 404"
+msgstr "Error 404"
+
 #: archive-creation.php:7
 msgid "Mes créations de sites Web"
 msgstr "My Website Creations"
@@ -32,6 +36,14 @@ msgstr "My Website Creations"
 msgid "Page sans <h1>"
 msgstr "Template without <h1>"
 
+#: archive-creation.php:21
+msgid "Pas de créations à afficher"
+msgstr "No creations to display"
+
 #. Name of the theme
 msgid "Theme Perso"
 msgstr "Theme Perso"
+
+#: 404.php:4
+msgid "Vérifiez que vous n'avez pas fait d'erreur dans l'URL."
+msgstr "Check that you have not made a mistake in the URL."
