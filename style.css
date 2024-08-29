@@ -82,6 +82,10 @@ main {
     padding: 0px var(--page-padding);
 }
 
+main p, main li{
+    line-height: 25px;
+}
+
 /* Footer */ 
 
 footer {

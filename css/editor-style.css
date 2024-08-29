@@ -12,3 +12,8 @@ pre code{
     background-color: black;
     color:greenyellow
 }
+
+figcaption{
+    font-style: italic;
+    text-align: center;
+}
