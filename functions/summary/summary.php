@@ -55,6 +55,11 @@ class Summary{
      * Add an id attribute to the headers
      */
     public function replace_headers(string $content){
+        /* If no headers do nothing */
+        if($this->headers == []){
+            return $content;
+        }
+
         foreach($this->headers as $header){
             $content = str_replace($header->html, $header->create_new_html(), $content);
         }
@@ -66,6 +71,11 @@ class Summary{
      * Append the summary at the right place
      */
     public function append_summary($content){
+        /* If no headers do nothing */
+        if($this->headers == []){
+            return $content;
+        }
+
         $position = strpos($content,$this->headers[0]->html);
         $before = substr($content, 0, $position);
         $after = substr($content, $position);

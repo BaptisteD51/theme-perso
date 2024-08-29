@@ -1,0 +1,14 @@
+kbd{
+    background-color: lightgray;
+    display: inline-block;
+    border:solid 2px lightslategray;
+    padding:2px;
+    border-radius:5px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+pre code{
+    background-color: black;
+    color:greenyellow
+}

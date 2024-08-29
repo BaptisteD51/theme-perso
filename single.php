@@ -3,7 +3,15 @@
 <?php if(have_posts()):?>
     <?php while(have_posts()): the_post();?>
         <h1><?php the_title();?></h1>
-        <?php the_post_thumbnail('medium');?>
+        <p class="post-publication-date">
+            <time><?php the_date(); ?></time>
+        </p>
+        <figure>
+            <?php the_post_thumbnail('medium');?>
+            <figcaption>
+                <?php echo get_the_post_thumbnail_caption(); ?>
+            </figcaption>
+        </figure>
         <?php the_content();?>
     <?php endwhile;?>
 

@@ -129,6 +129,16 @@ code, code strong{
     font-family: monospace;
 }
 
+kbd{
+    background-color: lightgray;
+    display: inline-block;
+    border:solid 2px lightslategray;
+    padding:2px;
+    border-radius:5px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
 /* Class WP */
 .alignfull {
     margin: 0px calc(50% - 50vw);
@@ -184,6 +194,19 @@ code, code strong{
 /* Page d'article */
 body.single-post main {
     width: var(--post-width);
+}
+
+body.single-post h1{
+    margin-bottom: 0px;
+}
+
+p.post-publication-date{
+    text-align: right;
+    margin-top:0px;
+}
+
+p.post-publication-date::first-letter{
+    text-transform: capitalize;
 }
 
 /* Archive du blog */
