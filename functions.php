@@ -4,10 +4,10 @@ function theme_perso_assets(){
     wp_register_script('fontawesome', 'https://kit.fontawesome.com/1c552aca57.js');
     wp_register_style('roboto', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     wp_register_script('jq', get_template_directory_uri().'/js/jquery/jquery-3.7.1.min.js');
-    wp_register_style('slick-css', get_template_directory_uri().'/js/slick/slick.css');
-    wp_register_style('slick-theme-css', get_template_directory_uri().'/js/slick/slick-theme.css');
-    wp_register_script('slick', get_template_directory_uri().'/js/slick/slick.min.js');
-    wp_register_style('slider', get_template_directory_uri().'/css/slider.css');
+    //wp_register_style('slick-css', get_template_directory_uri().'/js/slick/slick.css');
+    //wp_register_style('slick-theme-css', get_template_directory_uri().'/js/slick/slick-theme.css');
+    //wp_register_script('slick', get_template_directory_uri().'/js/slick/slick.min.js');
+    //wp_register_style('slider', get_template_directory_uri().'/css/slider.css');
     wp_register_script('highlightjs', get_template_directory_uri()."/js/highlightjs/highlight.min.js");
     wp_register_style('highlightjsCSS', get_template_directory_uri()."/js/highlightjs/styles/atom-one-dark-reasonable.min.css");
     wp_register_style('burgerCSS', get_template_directory_uri()."/css/burger.css");
@@ -17,10 +17,10 @@ function theme_perso_assets(){
     wp_enqueue_script('fontawesome');
     wp_enqueue_style('roboto');
     wp_enqueue_script('jq');
-    wp_enqueue_style('slick-css');
-    wp_enqueue_script('slick');
-    wp_enqueue_style('slick-theme-css');
-    wp_enqueue_style('slider');
+    //wp_enqueue_style('slick-css');
+    //wp_enqueue_script('slick');
+    //wp_enqueue_style('slick-theme-css');
+    //wp_enqueue_style('slider');
     wp_enqueue_script('highlightjs');
     wp_enqueue_style('highlightjsCSS');
     wp_enqueue_style('burgerCSS');
@@ -105,6 +105,15 @@ function theme_perso_init(){
             "with_front"=>"false",
         ]
     ]);
+
+    /* Register a custom taxonomy for ma creation post type */
+    register_taxonomy("technology", "creation", [
+        "public"=>true,
+        "publicly_queryable"=>false,
+        "show_in_nav_menus"=>false,
+        "show_in_rest"=>true,
+        "show_admin_column"=>true,
+    ]);
 }
 
 function theme_perso_wp_footer(){
@@ -119,7 +128,7 @@ function theme_perso_excerpt_length($length){
     return 20;
 }
 
-require_once 'creation-slider.php';
+require_once 'creation-posts.php';
 
 require_once 'functions/summary/theme_perso_summary.inc.php';
 
