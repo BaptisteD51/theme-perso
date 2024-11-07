@@ -29,6 +29,11 @@ figure{
     margin:0px;
 }
 
+img{
+    max-width:100%;
+    height: auto;
+}
+
 figcaption{
     font-style: italic;
     text-align: center;
@@ -219,7 +224,7 @@ main.archive-post {
     padding:5px 5px 15px 5px;
 }
 
-.archive-post-list .post-element-text p{
+.archive-post-list .post-element-text p:not(.creation-technology){
     margin:0px;
 }
 
@@ -241,6 +246,7 @@ main.archive-post {
     padding: 0px 5px;
     font-weight: bold;
     text-transform: uppercase;
+    margin:0px 0px 2px 0px;
 }
 
 /* Css pour le sommaire des articles */
