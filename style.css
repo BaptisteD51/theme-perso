@@ -174,7 +174,7 @@ body.single-post main {
     width: var(--post-width);
 }
 
-body.single-post h1{
+body.single-post h1, body.single-creation h1{
     margin-bottom: 0px;
 }
 
