@@ -39,12 +39,16 @@ function theme_perso_supports(){
     $palette = [
         [
             "slug" => "bleu-clair",
-            "color" => "#D7F5FB",
+            "color" => "#d4e9ff",
             "name" => "Bleu Clair"
         ],[
             "slug" => "bleu-moyen",
-            "color" => "#357BB1",
+            "color" => "#357bb1",
             "name" => "Bleu Moyen"
+        ],[
+            "slug" => "bleu-sombre",
+            "color" => "#224870",
+            "name" => "Bleu Sombre"
         ],
     ];
     add_theme_support('editor-color-palette', $palette);
