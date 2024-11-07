@@ -151,6 +151,11 @@ kbd{
     width: 100vw;
 }
 
+.wp-block-cover{
+    padding-left:0px;
+    padding-right: 0px;
+}
+
 .wp-block-cover.alignfull .wp-block-cover__inner-container {
     width: var(--page-width);
     padding: 0px var(--page-padding);
@@ -463,11 +468,15 @@ div.header-container {
 
 /* Styles on main (gutenberg editor) */
 
-main a:not(.wp-block-button a, .archive-post-list a, .archive-creation-list a)::after{
+main a:not(.wp-block-button a, .archive-post-list a, .archive-creation-list a, ol.summary a){
+    color: var(--bleu-fonce)
+
+}
+
+main a:not(.wp-block-button a, .archive-post-list a, .archive-creation-list a, ol.summary a)::after{
     content:' 🔗';
 }
 
 h3 a {
     text-decoration-thickness: 2px;
-    color: var(--bleu-fonce)
 }
