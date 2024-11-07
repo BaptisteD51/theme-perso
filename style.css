@@ -440,3 +440,18 @@ main a:not(.wp-block-button a, .archive-post-list a, .archive-creation-list a, o
 h3 a {
     text-decoration-thickness: 2px;
 }
+
+/* Utility first classes */
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.my-10{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
